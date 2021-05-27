@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:fantasy;
+}
+
+#topPicture{
+    position: absolute;
+    z-index: -1;
+}
+
+#topHeader {
+    color: whitesmoke;
+    font-size: 80px;
+    position: relative;
+    top: 400px;
+    left: 80px;
+    text-shadow: 10px 10px black;
+}
+
+#topMessage {
+    position: relative;
+    color: whitesmoke;
+    top: 450px;
+    left: 200px;
+    font-size: 30px;
+    text-shadow: 5px 5px black;
+}
+
+#main {
+    width: 100%;
+    height: max-content;
+    background-color: antiquewhite;
+    position: relative;
+    top: 523px;
+    border: 3px solid black;
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.box {
+    margin-top: 30px;
+    background-color: rgba(240, 255, 240, 0.404);
+    box-shadow: 5px 5px 10px rgba(70, 51, 51, 0.664);
+    border-radius: 5%;
+    text-align: center;
+    width: 17%;
+    display: inline-block;
+    position: relative;
+}
+
+.box img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    border: 3px dotted black;
+    box-shadow: 20px 20px 20px black;
+    margin-top: 100px;
+}
+
+.box img:hover{
+    width: 300px;
+    height: 300px;
+    opacity: 0.3; 
+}
+
+.box p {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    text-align: center;   
+    font-size: x-large;  
+}
+
+.box .text {
+    transition: opacity 0.4s ease-in-out;
+    position: absolute;
+    margin-top: 200px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: black;
+    text-shadow: 2px 2px rgb(255, 255, 255);
+    letter-spacing: -1px;
+}
+
+.box:hover .text{
+    opacity: 0.9;
+}
+
+.link{
+    font-style: italic;
+    color: rgb(59, 38, 38);
+}
+
+
+
+
+
