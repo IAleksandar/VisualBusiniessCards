@@ -79,9 +79,6 @@ layerThree.addEventListener("click",() => {
 
 
 
-// =============================    JOIN US     =========================
-
-
 
 
 
