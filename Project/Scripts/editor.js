@@ -1,26 +1,16 @@
-// ====================== MENU ==================================
-let navLinks = document.getElementById("navLinks");
-function showMenu() {
-    navLinks.style.right = "0";
-}
-
-function hideMenu() {
-    navLinks.style.right = "-200px";
-}
-
-
-// ===================== OPTIONS ===================================
 $( "#information" ).click(function() {
     $(".templates-options").hide();
-    $(".information-options").show();
+    $(".information-options").fadeIn(700);
     $(".qr-code-options").hide();
+   $(".color-options").hide();
+   $(".font-options").fadeIn(700);
 
     
   });
 
   $( "#templates" ).click(function() {
     $(".information-options").hide();
-    $(".templates-options").show();
+    $(".templates-options").fadeIn(700);
     $(".qr-code-options").hide();
     
   });
@@ -28,100 +18,207 @@ $( "#information" ).click(function() {
   $( "#code-qr" ).click(function() {
     $(".information-options").hide();
     $(".templates-options").hide();
-    $(".qr-code-options").show();
+    $(".qr-code-options").fadeIn(700);
 
     
   });
-
- 
-
-                                //   ================      SLIDER       ==================
-
-                                
-
-var inputRange = document.getElementsByClassName('range')[0],
-    maxValue = 100, // the higher the smoother when dragging
-    speed = 5,
-    currValue, rafID;
-
-// set min/max value
-inputRange.min = 0;
-inputRange.max = maxValue;
+  $( ".menu" ).click(function() {
+    $(".text-Options").hide();
+  });
+   
+ $(".text-Options").hide();
+ $( "#textarea-div" ).click(function() {
+    $(".text-Options").fadeIn(700);
+  });
 
 
+  $( ".choose-font" ).click(function() {
+    $(".templates-options").hide();
+    $(".information-options").fadeIn(700);
+    $(".font-options").fadeIn(700);
+   $(".color-options").hide();
 
-function unlockEndHandler() {
+   });
+
+
+   $( ".fa-fill-drip" ).click(function() {
+    $(".templates-options").hide();
+    $(".information-options").fadeIn(700);
+    $(".font-options").hide();
+   $(".color-options").fadeIn(700);
     
-    // store current value
-    currValue = +this.value;
-    
-    // determine if we have reached success or not
-    if(currValue >= maxValue) {
-        successHandler();
-    }
-    else {
-        rafID = window.requestAnimationFrame(animateHandler);
-    }
+   });
+
+//    ===============================  font style  ============================
+
+    $( ".fa-bold" ).click(function() {
+     $("#textarea").css("font-weight" , "bold");
+    });
+
+   $( ".fa-italic" ).click(function() {
+    $("#textarea").css("font-style" , "italic");
+   });
+
+   $( ".fa-underline" ).click(function() {
+    $("#textarea").css("text-decoration" , "underline");
+   });
+
+//    ================================ fonts  ==================================
+
+$( "#monospace" ).click(function() {
+    $("#textarea").css("font-family" , "monospace");
+   });
+
+   $( "#arial" ).click(function() {
+    $("#textarea").css("font-family" , "arial");
+   });
+
+   $( "#georgia" ).click(function() {
+    $("#textarea").css("font-family" , "georgia");
+   });
+
+   $( "#fantasy" ).click(function() {
+    $("#textarea").css("font-family" , "fantasy");
+   });
+
+   $( "#cursive" ).click(function() {
+    $("#textarea").css("font-family" , "cursive");
+   });
+
+   $( "#calibri" ).click(function() {
+    $("#textarea").css("font-family" , "calibri");
+   });
+
+   $( "#tahoma" ).click(function() {
+    $("#textarea").css("font-family" , "tahoma");
+   });
+
+   $( "#impact" ).click(function() {
+    $("#textarea").css("font-family" , "impact");
+   });
+
+   $( "#trebuchet" ).click(function() {
+    $("#textarea").css("font-family" , "Trebuchet MS");
+   });
+
+                //    =====================  colors   ====================
+
+     $( ".one" ).click(function() {
+        $("#textarea").css("color" , "black");
+     });
+     
+     $( ".two" ).click(function() {
+        $("#textarea").css("color" , "rgb(49, 47, 47)");
+     });
+
+     $( ".three" ).click(function() {
+        $("#textarea").css("color" , "rgb(114, 114, 114)");
+     });
+
+     $( ".four" ).click(function() {
+        $("#textarea").css("color" , "rgb(172, 172, 172)");
+     });
+
+     $( ".five" ).click(function() {
+        $("#textarea").css("color" , "white");
+     });
+
+     $( ".six" ).click(function() {
+        $("#textarea").css("color" , "rgb(112, 2, 2)");
+     });
+
+     $( ".seven" ).click(function() {
+        $("#textarea").css("color" , "rgb(253, 78, 78)");
+     });
+
+     $( ".eight" ).click(function() {
+        $("#textarea").css("color" , "pink");
+     });
+
+     $( ".nine" ).click(function() {
+        $("#textarea").css("color" , "palevioletred");
+     });
+
+     $( ".ten" ).click(function() {
+        $("#textarea").css("color" , "violet");
+     });
+
+     $( ".eleven" ).click(function() {
+        $("#textarea").css("color" , "blueviolet");
+     });
+     $( ".twelve" ).click(function() {
+        $("#textarea").css("color" , "rgb(0, 102, 92)");
+     });
+     $( ".thirteen" ).click(function() {
+        $("#textarea").css("color" , "rgb(12, 158, 143)");
+     });
+     $( ".fourteen" ).click(function() {
+        $("#textarea").css("color" , "turquoise");
+     });
+     $( ".fifteen" ).click(function() {
+        $("#textarea").css("color" , "rgb(65, 146, 221)");
+     });
+     $( ".sixteen" ).click(function() {
+        $("#textarea").css("color" , "rgb(8, 83, 196)");
+     });
+     $( ".seventeen" ).click(function() {
+        $("#textarea").css("color" , "rgb(0, 0, 170)");
+     });
+     $( ".eighteen" ).click(function() {
+        $("#textarea").css("color" , "rgb(1, 59, 1)");
+     });
+     $( ".ninteen" ).click(function() {
+        $("#textarea").css("color" , "green");
+     });
+     $( ".twenty" ).click(function() {
+        $("#textarea").css("color" , "rgb(70, 156, 70)");
+     });
+     $( ".t-one" ).click(function() {
+        $("#textarea").css("color" , "rgb(96, 129, 46) ");
+     });
+     $( ".t-two" ).click(function() {
+        $("#textarea").css("color" , "yellow");
+     });
+     $( ".t-three" ).click(function() {
+        $("#textarea").css("color" , "orange");
+     });
+     $( ".t-four" ).click(function() {
+        $("#textarea").css("color" , "red");
+     });
+
+
+   //   =============== uppercase ===================
+   $( ".fa-font-case" ).click(function() {
+      $("#textarea").css("text-transform" , "uppercase");
+   });
+
+
+
+//   ======================   show templates    ===================
+
+
+   $(document).ready(function(){
+      $("#templates-select").on('change', function(){
+          $(".t").hide();
+         $("." + $(this).val()).fadeIn(700);
+      }).change();
+      
+   });
+
+
+
+// =================================    font size     ======================================
+
+function increaseFontSizeBy100px() {
+    document.getElementById('texarea').style.fontSize = "100px";
 }
 
-// handle range animation
-function animateHandler() {
+ function decreaseFontSizeBy100px() {
+     document.getElementById('textarea').style.fontSize = "50px";
+ }
 
-    // calculate gradient transition
-    var transX = currValue - maxValue;
-    
-    // update input range
-    inputRange.value = currValue;
 
-    //Change slide thumb color on mouse up
-    if (currValue < 20) {
-        inputRange.classList.remove('ltpurple');
-    }
-    if (currValue < 40) {
-        inputRange.classList.remove('purple');
-    }
-    if (currValue < 60) {
-        inputRange.classList.remove('pink');
-    }
-    
-    // determine if we need to continue
-    if(currValue > -1) {
-      window.requestAnimationFrame(animateHandler);   
-    }
-    
-    // decrement value
-    currValue = currValue - speed;
-}
+// ==============  change templates  =======
 
 
 
-// bind events
-inputRange.addEventListener('mousedown', unlockStartHandler, false);
-inputRange.addEventListener('mousestart', unlockStartHandler, false);
-inputRange.addEventListener('mouseup', unlockEndHandler, false);
-inputRange.addEventListener('touchend', unlockEndHandler, false);
-
-// move gradient
-inputRange.addEventListener('input', function() {
-    //Change slide thumb color on way up
-    if (this.value > 20) {
-        inputRange.classList.add('ltpurple');
-    }
-    if (this.value > 40) {
-        inputRange.classList.add('purple');
-    }
-    if (this.value > 60) {
-        inputRange.classList.add('pink');
-    }
-
-    //Change slide thumb color on way down
-    if (this.value < 20) {
-        inputRange.classList.remove('ltpurple');
-    }
-    if (this.value < 40) {
-        inputRange.classList.remove('purple');
-    }
-    if (this.value < 60) {
-        inputRange.classList.remove('pink');
-    }
-});
